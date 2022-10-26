@@ -1,14 +1,9 @@
 package main
-
-type Iterator interface {
-	hasNext() bool
-	getNest() Book
-}
-
 type BookShelf struct {
 	books []*Book
 }
 
+//具象コレクション　Concrete Collection
 func (bookShelf *BookShelf)BookShelf (books []*Book){
 	bookShelf.books=books
 }

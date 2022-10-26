@@ -9,6 +9,8 @@ func (book *Book) getName() string {
 }
 
 // コンストラクタ
-func (book *Book) Book(name string) {
-	book.name = name
+func NewBook(name string) *Book{
+	b:=new(Book)
+	b.name = name
+	return b
 }
