@@ -5,9 +5,10 @@
 
 class StringDisplay:public AbstractDisplay{
     public:
-        StringDisplay(string str){
+        StringDisplay(string str,string startMessage){
             message=str;
             stringSize=str.size();
+            this->startMessage=startMessage;
         }
     private:
         string message;

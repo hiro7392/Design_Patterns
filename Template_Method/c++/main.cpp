@@ -7,13 +7,11 @@
 
 int main(){
 
-    cout<<"-----Char Display-------"<<endl;
-    CharDisplay chDisplay('x');
+    CharDisplay chDisplay('x',"Char Display");
     chDisplay.display ();
 
     cout<<endl;
-    cout<<"-----String Display-------"<<endl;
-    StringDisplay strDisplay("this is message");
+    StringDisplay strDisplay("this is message","String Display");
     strDisplay.display();
 
     return 0;

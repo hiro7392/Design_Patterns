@@ -3,8 +3,9 @@
 #endif
 class CharDisplay:public AbstractDisplay {
     public:
-        CharDisplay(char c){
+        CharDisplay(char c,string Message){
             character=c;
+            this->startMessage=Message;
         }
     protected:
         void print() const override{
