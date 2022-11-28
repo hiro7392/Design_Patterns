@@ -10,7 +10,7 @@ Template Methodをインスタンス生成に応用する方法。スーパー�
 |  Product|  抽象メソッドuseのみ実装  |
 |  Factory  | メソッドcreateのみを実装している抽象クラス  | 
 |  ConcreteProduct | メソッドuseを実装しているクラス  | 
-|  ConcreteFactory  |  メソッドcreateProduct,registerProductを実装しているクラス  | 
+|  ConcreteFactory  |  ConcreteProductのインスタンスを生成するメソッド(=createProduct)を実装しているクラス  | 
 
 ## 実装するメリット
 
