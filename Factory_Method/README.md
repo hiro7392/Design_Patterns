@@ -11,3 +11,9 @@ Template Methodをインスタンス生成に応用する方法。スーパー�
 |  Factory  | メソッドcreateのみを実装している抽象クラス  | 
 |  ConcreteProduct | メソッドuseを実装しているクラス  | 
 |  ConcreteFactory  |  メソッドcreateProduct,registerProductを実装しているクラス  | 
+
+## 実装するメリット
+
+* クラスを利用するClient側から具体的なクラス(ConcreteMethod)を知らなくとも利用できる。
+* 抽象クラスで生成と実装の枠組みを決めることでサブクラスでの実装忘れがコンパイル時に検知できる。
+* 複数の具象クラス間で最低限必要なメソッドやデータを共通化できる。

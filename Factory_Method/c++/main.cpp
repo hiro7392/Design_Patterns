@@ -11,8 +11,9 @@
 
 
 
-
+//  クライアントはConcreteProduct1,2について知らないが利用可能
 void ClientCode(const Factory& factory){
+    
     factory.SomeOperation();
 }
 
