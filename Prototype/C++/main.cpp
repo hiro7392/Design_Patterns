@@ -11,7 +11,7 @@ class Product {
 
 //  Productの具象クラス1
 //  文字列を枠線で囲って表示する
-class MessageBox:Product{
+class MessageBox:public Product{
     char decorator;
     private:
         void print(int n)const {
@@ -40,7 +40,7 @@ class MessageBox:Product{
 };
 //  Productの具象クラス2
 //  文字列に下線を引いて表示する
-class UnderLinePen:Product{
+class UnderLinePen:public Product{
     char ulchar;
     public:
         UnderLinePen(){};//デフォルトコンストラクタ
@@ -53,6 +53,7 @@ class UnderLinePen:Product{
         void use(string s)const override{
             cout<<s<<endl;
             for(int i=0;i<s.size();i++)cout<<this->ulchar;
+            cout<<endl;
         }
         Product *createCopy()const override{
             return new UnderLinePen(*this);
@@ -65,8 +66,8 @@ class Manager{
         //  クラス名とクラスをセットで登録する
         map<string,Product*>mp;
     public:
-        ~Manager(){}
-        Manager(){}
+        ~Manager(){};
+        Manager(){};
         void registerProduct(string name,Product* prototype){
             mp.emplace(make_pair(name,prototype));
         }
@@ -83,16 +84,33 @@ class Manager{
 };
 
 
+//  クライアント側では具体的なクラス名が出てこないので実装を分離できる
+//  (登録した名称のみ渡せば良いので生成の実装に依存しない)
+void ClientCode(Manager& manager){
+    cout<<"Let's create a Prototype 1"<<endl;
+    Product *product1 =manager.createProduct("messageBox");
+    product1->use("propduct1");
 
-void ClientCode(const Manager& manager){
-    
+    cout<<endl;
+    cout<<"Let's create a Prototype 2"<<endl;
+
+    Product *product2 =manager.createProduct("underLine");
+    product2->use("product2");
 }
 
 int main(){
 
     Manager* manager=new Manager();
     MessageBox* mBox=new MessageBox('*');
-    mBox->use("hello!");
+    // messageBoxという名前で具象クラス MessageBoxをManagerに登録
+    manager->registerProduct("messageBox",mBox);
+
+    UnderLinePen* underLine=new UnderLinePen('-');
+    // underLineという名前で具象クラス UnderLinePenをManagerに登録
+    manager->registerProduct("underLine",underLine);
+
+    ClientCode(*manager);
+
 
     return 0;
 }
