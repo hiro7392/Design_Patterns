@@ -1,5 +1,7 @@
 # Design_Patterns
 デザインパターン入門の実装をやっていくレポジトリ
+This repository is intended to 
+## 言語(language)
 以下の言語で実装していきます。
 * C++
 * Go
