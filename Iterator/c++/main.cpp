@@ -1,13 +1,13 @@
 #include<iostream>
-#include"BookShelf.hpp"
+#include"Container.hpp"
 
 int main(){
 
     //中身がintの場合
     cout<<"____Iterator with int_____"<<endl;
-    BookShelf<int>BookShelfInt(4);
-    for(int i=0;i<10;i++)BookShelfInt.appendBook(i);    //maxsizeが4なので３までしか入らない
-    Iterator<int,BookShelf<int>> *it=BookShelfInt.CreateIterator();
+    Container<int>ContainerInt(4);
+    for(int i=0;i<10;i++)ContainerInt.appendBook(i);    //maxsizeが4なので３までしか入らない
+    Iterator<int,Container<int>> *it=ContainerInt.CreateIterator();
     for(it->First();!it->IsEnd();it->Next()){
         cout<<"element = "<<*it->Current()<<endl;
     }
@@ -18,16 +18,16 @@ int main(){
     element = 3
     */
     cout<<"____Iterator with book_____"<<endl;
-    BookShelf<Book> bookshelf(10);
+    Container<Book> container(10);
     Book book1("トムソーヤの");
-    bookshelf.appendBook(book1);
-    bookshelf.appendBook(Book("世界の終わりとハードボイルドワンダーランド"));
-    bookshelf.appendBook(Book("Alice in Wonderland"));
-    bookshelf.appendBook(Book("罪と罰"));
-    bookshelf.appendBook(Book("人間失格"));
+    container.appendBook(book1);
+    container.appendBook(Book("世界の終わりとハードボイルドワンダーランド"));
+    container.appendBook(Book("Alice in Wonderland"));
+    container.appendBook(Book("罪と罰"));
+    container.appendBook(Book("人間失格"));
 
     // //イテレータを生成
-    Iterator<Book,BookShelf<Book>> *itr=bookshelf.CreateIterator();
+    Iterator<Book,Container<Book>> *itr=container.CreateIterator();
     for(itr->First();!itr->IsEnd();itr->Next()){
         Book now =*itr->Current();
         cout<<"book name = "<<now.getName()<<endl;
