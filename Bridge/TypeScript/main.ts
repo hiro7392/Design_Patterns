@@ -21,7 +21,7 @@ class Display{
 };
 
 //  機能の実装クラス
-class countDisplay extends Display{
+class CountDisplay extends Display{
     constructor(impl:DisplayImpl){
         super(impl);
     };
@@ -69,7 +69,7 @@ class StringDisplayImpl extends DisplayImpl{
 const clientCode=()=>{
     const d1=new Display(new StringDisplayImpl("d1 hello!"));
     const d2=new Display(new StringDisplayImpl("d2 hello!"));
-    const d3=new countDisplay(new StringDisplayImpl("d3 hello!"));
+    const d3=new CountDisplay(new StringDisplayImpl("d3 hello!"));
 
     d1.display();
     console.log();
