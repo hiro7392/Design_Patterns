@@ -29,3 +29,4 @@
 * 密結合なクラスに対してBridgeパターンを適用すると余計にコードが複雑になる可能性がある。
 ## 実装したコードへのリンク
 * [TypeScript](https://github.com/sakana7392/Design_Patterns/tree/main/Bridge/TypeScript)
+* [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Bridge/Go)
