@@ -4,18 +4,18 @@
 #include "Book.hpp"
 #include "Iterator.hpp"
 template <class T>
-class BookShelf{
+class Container{
     //  
-    friend class Iterator<T,BookShelf>;
+    friend class Iterator<T,Container>;
 
     public:
-        BookShelf(){}
-        BookShelf(int maxsize){
+        Container(){}
+        Container(int maxsize){
             this->books.resize(maxsize);
         }
-        // BookShelf Iterator
-        Iterator<T,BookShelf> *CreateIterator(){
-            return new Iterator<T,BookShelf>(this);
+        // Container Iterator
+        Iterator<T,Container> *CreateIterator(){
+            return new Iterator<T,Container>(this);
         }
         T getBookAt(int i){
             return books[i];

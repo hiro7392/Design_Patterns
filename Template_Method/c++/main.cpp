@@ -14,5 +14,6 @@ int main(){
     StringDisplay strDisplay("this is message","String Display");
     strDisplay.display();
 
+    
     return 0;
 }

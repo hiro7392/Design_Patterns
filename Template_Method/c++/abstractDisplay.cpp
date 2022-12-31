@@ -7,14 +7,17 @@ class AbstractDisplay{
 
     public:
         void display()const{
-                this->start();
-                this->open();
-                for(int i=0;i<5;i++){
-                    this->print();
-                }
-                this->close();
+            this->start();
+            this->open();
+            for(int i=0;i<5;i++){
+                this->print();
             }
-        AbstractDisplay(){};
+            this->close();
+        }
+        AbstractDisplay(){}
+        void end(){
+            saySpecialMessage();
+        }
     protected:
         void start()const{
             cout<<"----"<<startMessage<<"----"<<endl;
@@ -26,5 +29,10 @@ class AbstractDisplay{
         //  displayクラスのみ実装する
         void sayHello(){
             cout<<"start!"<<endl;
+        }
+
+    private:
+        void saySpecialMessage(){
+            cout<<"-----special----"<<endl;
         }
 };

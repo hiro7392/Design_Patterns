@@ -1,0 +1,10 @@
+# Composite
+## 概要
+## 実装の詳細
+## 実装するメリットとデメリット
+### メリット
+### デメリット
+## 実装したコード
+* [c++](https://github.com/sakana7392/Design_Patterns/tree/main/Composite/c++)
+* [TypeScript](https://github.com/sakana7392/Design_Patterns/tree/main/Composite/TypeScript)
+* [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Composite/Go)

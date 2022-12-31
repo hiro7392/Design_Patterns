@@ -17,6 +17,7 @@ class CharDisplay:public AbstractDisplay {
         void close()const override{
             cout<<">>"<<endl;
         }
+        
 
     private:
     char character;

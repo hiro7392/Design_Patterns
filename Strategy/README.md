@@ -1,0 +1,10 @@
+# Strategy
+## 概要
+## 実装の詳細
+## 実装するメリットとデメリット
+### メリット
+### デメリット
+## 実装したコードへのリンク
+* [c++](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/c++)
+* [TypeScript](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/TypeScript)
+* [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/Go)
