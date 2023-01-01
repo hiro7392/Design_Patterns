@@ -21,17 +21,19 @@
 | Player(Context) | Strategyを利用するクラス |
 | Strategy | ジャンケンのAPIを定義したインターフェイス |
 | WinningStrategy | 勝った場合勝った手をつづけて出す、そうでなければランダムで選択する具象クラス1。Stategyを実装する |
-| ProbStrategy | 過去の勝率が高い手を選択する具象クラス2。Stategyを実装する |
-
-
-
-
+| RandomStrategy | 完全にRandomに手をを選択する具象クラス2。Stategyを実装する |
 
 
 ## 実装するメリットとデメリット
 ### メリット
+* 振る舞い部分が交換可能になる(検証が容易になる)。
+* 実装とクライアントコードの分離
+* 継承をinterfaceで置き換えられる。
+* Context(Player)を変更せずに新規に振る舞い(ConcreteStrategy)を追加できる
 ### デメリット
+* アルゴリズムの数が少ない場合はプログラムが必要以上に複雑になる(ので実装する理由がない)。
+* クライアントは適切な振る舞い(Strategy)を選択するためにConcreteStrategy間の違いを知っておく必要がある。
 ## 実装したコード
 
 * [TypeScript](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/TypeScript)
-* [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/Go)
+<!-- * [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/Go) -->
