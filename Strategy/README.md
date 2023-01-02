@@ -23,6 +23,19 @@
 | WinningStrategy | 勝った場合勝った手をつづけて出す、そうでなければランダムで選択する具象クラス1。Stategyを実装する |
 | RandomStrategy | 完全にRandomに手をを選択する具象クラス2。Stategyを実装する |
 
+[Goでの実装](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/TypeScript)
+<br>[Refactoring.guru](https://refactoring.guru/ja/design-patterns)を参考に実装
+
+Cacheにmap[string]stringで要素を保存、削除するアルゴリズムを交換可能にする
+アルゴの中身は実装を省略
+| 名称            | 説明                                                                          |
+| --------------- | ----------------------------------------------------------------------------- |
+| Cache(Context) | Strategyを利用するクラス |
+| EvictionAlgo(Strategy) | Chachから要素を除去するアルゴリズムのインターフェイスを定義 |
+| Lfu | Evition ALgoを実装するクラス1 least frequently used で削除 |
+| Fifo | Evition ALgoを実装するクラス2 First in first outで削除 |
+| Lru| Evition ALgoを実装するクラス3 Least  |
+
 
 ## 実装するメリットとデメリット
 ### メリット
@@ -36,4 +49,4 @@
 ## 実装したコード
 
 * [TypeScript](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/TypeScript)
-<!-- * [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/Go) -->
+* [Go](https://github.com/sakana7392/Design_Patterns/tree/main/Strategy/Go)
