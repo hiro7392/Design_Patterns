@@ -3,24 +3,23 @@ package main
 import "fmt"
 
 type File struct {
-	name  string
-	size  int
-	entry Entry
+	name string
+	size int
 }
 
-func (file *File) GetName() string {
-	return file.name
+func (f *File) GetName() string {
+	return f.name
 }
-func (file *File) GetSize() int {
-	return file.size
+func (f *File) GetSize() int {
+	return f.size
 }
-func (file *File) PrintList() {
-	fmt.Println("file: %s\n", file.name)
+func (f *File) PrintList() {
+	fmt.Printf("file: %s\n", f.name)
 }
 
 func newFile(name string, size int) File {
-	file := File{}
-	file.name = name
-	file.size = size
-	return file
+	f := File{}
+	f.name = name
+	f.size = size
+	return f
 }

@@ -3,32 +3,32 @@ package main
 import "fmt"
 
 type Folder struct {
-	name  string
-	dir   []Entry
-	entry Entry
+	name string
+	dir  []Entry
 }
 
-func (folder *Folder) GetName() string {
-	return folder.name
+func (f *Folder) GetName() string {
+	return f.name
 }
-func (folder *Folder) GetSize() int {
+func (f *Folder) GetSize() int {
 	var size int = 0
-	for _, elem := range folder.dir {
+	for _, elem := range f.dir {
 		size += elem.GetSize()
 	}
 	return size
 }
-func (folder *Folder) PrintList() {
-	fmt.Println("foler: %s\n", folder.name)
-	for _, elem := range folder.dir {
+func (f *Folder) PrintList() {
+	fmt.Printf("foler: %s\n", f.name)
+	for _, elem := range f.dir {
 		elem.PrintList()
 	}
 }
 func newFolder(name string) *Folder {
-	folder := &Folder{}
 	return &Folder{
 		name: name,
-		size: 0,
-		dir:  {},
 	}
+}
+
+func (f *Folder) Add(entry Entry) {
+	f.dir = append(f.dir, entry)
 }
