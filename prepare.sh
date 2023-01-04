@@ -19,6 +19,7 @@ done
 touch $1/README.md
 echo "# $1" >$1/README.md
 echo "## 概要" >>$1/README.md
+echo "## クラス図" >>$1/README.md
 echo "## 実装の詳細" >>$1/README.md
 echo "## 実装するメリットとデメリット" >>$1/README.md
 echo "### メリット" >>$1/README.md
