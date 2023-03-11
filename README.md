@@ -17,3 +17,4 @@ I described the overview of each pattern at README.md in each directory.(It will
 The following references are used for implementation. 
 * Java言語で学ぶデザインパターン入門 第3版
 * [Refactoring.guru](https://refactoring.guru/ja/design-patterns)
+* [Patterns.dev](https://www.patterns.dev/)
